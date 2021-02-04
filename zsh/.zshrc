@@ -53,4 +53,6 @@ zplug load
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' emacs-forward-word
 
+export PATH=/home/karolis/repos/scripts:$PATH
+
 cd ~

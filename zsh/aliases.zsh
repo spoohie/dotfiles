@@ -1,6 +1,7 @@
 alias v="vim"
 alias f="find . -iname"
 alias g="grep --color=always -Rni"
+alias l="vim -R"
 
 # better ls
 alias ls="ls --color=auto"

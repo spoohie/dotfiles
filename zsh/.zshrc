@@ -2,7 +2,7 @@
 
 autoload -Uz promptinit
 promptinit
-prompt adam1
+#prompt adam1
 
 setopt histignorealldups sharehistory
 
@@ -54,5 +54,10 @@ bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' emacs-forward-word
 
 export PATH=/home/karolis/repos/scripts:$PATH
+
+# zsh-z
+source ~/repos/dotfiles/zsh/zsh-z.plugin.zsh
+autoload -U compinit && compinit
+zstyle ':completion:*' menu select
 
 cd ~

@@ -1,3 +1,4 @@
-cat zsh_settings >> ~/.zshrc
-
+zsh
+zplug
+starfish
 chsh -s /usr/bin/zsh

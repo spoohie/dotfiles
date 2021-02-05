@@ -40,11 +40,11 @@ eval $(starship init zsh)
 
 source ~/.zplug/init.zsh
 
-zplug "zpm-zsh/tmux"
+#zplug "zpm-zsh/tmux"
 
 zplug "yous/vanilli.sh"
 
-zplug "plugins/fasd", from:oh-my-zsh
+#zplug "plugins/fasd", from:oh-my-zsh
 
 zplug "~/repos/dotfiles/zsh", use:"aliases.zsh", from:local
 

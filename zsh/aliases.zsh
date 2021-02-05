@@ -15,6 +15,7 @@ alias ...="cd ../.."
 
 # git
 alias gs="git status"
+alias ga="git add -u"
 alias gcm="git commit -m"
 alias gitl="git log --graph --decorate --oneline"
 

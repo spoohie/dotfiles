@@ -53,7 +53,7 @@ zplug load
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' emacs-forward-word
 
-export PATH=$HOME/repos/scripts:$PATH
+export PATH=~/repos/scripts:$PATH
 
 # zsh-z
 source ~/repos/dotfiles/zsh/zsh-z.plugin.zsh

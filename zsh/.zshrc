@@ -60,4 +60,9 @@ source ~/repos/dotfiles/zsh/zsh-z.plugin.zsh
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 
+# create a widget from `my-accept-line' with the same name
+zle -N my-accept-line
+# rebind Enter, usually this is `^M'
+bindkey '^M' my-accept-line
+
 cd ~

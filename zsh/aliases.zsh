@@ -3,7 +3,7 @@ alias sudo="sudo "
 alias kurwa="sudo"
 
 # miscellaneous
-alias v="vim"
+alias e="vim"
 alias f="find . -iname"
 alias g="grep --color=always -Rni"
 alias c="rsync -ah --info=progress2" # pretty copy

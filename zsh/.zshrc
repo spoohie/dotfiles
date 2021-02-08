@@ -46,7 +46,7 @@ zplug "yous/vanilli.sh"
 
 #zplug "plugins/fasd", from:oh-my-zsh
 
-zplug "~/repos/dotfiles/zsh", use:"{my-accept-line,aliases}.zsh", from:local
+zplug "~/repos/dotfiles/zsh", use:"{my-accept-line,up,aliases}.zsh", from:local
 
 zplug load
 

@@ -1,4 +1,4 @@
-# ls -l (+ git status in repo) when ENTER
+# ls (+ git status in repo) when ENTER
 my-accept-line () {
     # check if the buffer does not contain any words
     if [ ${#${(z)BUFFER}} -eq 0 ]; then
@@ -7,9 +7,7 @@ my-accept-line () {
         echo
         # check if inside git repository
         if git rev-parse --git-dir > /dev/null 2>&1 ; then
-            # if so, execute `git status' and `ls'
-        ls
-        echo ""
+            # if so, execute `git status'
             git status
         else
             # else run `ls'

@@ -7,6 +7,7 @@ alias v="vim"
 alias f="find . -iname"
 alias g="grep --color=always -Rni"
 alias c="rsync -ah --info=progress2" # pretty copy
+alias diff="colordiff"
 
 # ls
 alias ls="ls --color=auto"

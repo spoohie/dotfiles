@@ -46,7 +46,7 @@ zplug "yous/vanilli.sh"
 
 #zplug "plugins/fasd", from:oh-my-zsh
 
-zplug "~/repos/dotfiles/zsh", use:"aliases.zsh", from:local
+zplug "~/repos/dotfiles/zsh", use:"{my-accept-line,aliases}.zsh", from:local
 
 zplug load
 
@@ -60,9 +60,7 @@ source ~/repos/dotfiles/zsh/zsh-z.plugin.zsh
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 
-# create a widget from `my-accept-line' with the same name
-zle -N my-accept-line
-# rebind Enter, usually this is `^M'
+# my-accept-line, `^M' is enter
 bindkey '^M' my-accept-line
 
 cd ~

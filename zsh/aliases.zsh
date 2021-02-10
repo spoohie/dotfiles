@@ -30,6 +30,6 @@ alias d="docker"
 alias dps="docker ps"
 
 # faster config files edit
-alias ec="v + ~/.zshrc"
+alias ec="vim + ~/.zshrc"
 alias sc="source ~/.zshrc"
-alias ea="v ~/repos/dotfiles/zsh/aliases.zsh"
+alias ea="vim ~/repos/dotfiles/zsh/aliases.zsh"

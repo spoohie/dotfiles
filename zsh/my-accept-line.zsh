@@ -1,4 +1,4 @@
-# ls (+ git status in repo) when ENTER
+# ls -l (+ git status in repo) when ENTER
 my-accept-line () {
     # check if the buffer does not contain any words
     if [ ${#${(z)BUFFER}} -eq 0 ]; then
@@ -11,7 +11,7 @@ my-accept-line () {
             git status
         else
             # else run `ls'
-            ls
+            ls -l
         fi
     fi
     # in any case run the `accept-line' widget

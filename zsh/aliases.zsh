@@ -7,6 +7,7 @@ alias e="vim"
 alias f="find . -iname"
 alias g="grep --color=always -Rni"
 alias c="rsync -ah --info=progress2" # pretty copy
+alias v="view"
 alias diff="colordiff"
 
 # ls
@@ -28,6 +29,8 @@ alias gitl="git log --graph --decorate --oneline"
 # docker
 alias d="docker"
 alias dps="docker ps"
+alias dc="docker-compose"
+alias dcr="dc down && dc up"
 
 # faster config files edit
 alias ec="vim + ~/.zshrc"

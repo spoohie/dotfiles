@@ -9,6 +9,7 @@ my-accept-line () {
         if git rev-parse --git-dir > /dev/null 2>&1 ; then
             # if so, execute `git status'
             git status
+	    ls -l
         else
             # else run `ls'
             ls -l

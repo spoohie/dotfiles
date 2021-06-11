@@ -66,5 +66,12 @@ bindkey '^M' my-accept-line
 # export exercism.io app
 export PATH=~/bin:$PATH
 
+# python virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+export PATH=$HOME/.local/bin:$PATH
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/repos
+source $HOME/.local/bin/virtualenvwrapper.sh
+
 export GIT_EDITOR=vim
 cd ~

@@ -9,6 +9,7 @@ alias g="grep --color=always -Rni"
 alias c="rsync -ah --info=progress2" # pretty copy
 alias v="view"
 alias diff="colordiff"
+alias clock="sudo hwclock --hctosys"
 
 # ls
 alias ls="ls --color=auto"
@@ -19,6 +20,11 @@ alias lt="ls --human-readable --size -1 -S --classify" # sort by size (human-rea
 # cd
 alias ..="cd .."
 alias ...="cd ../.."
+
+# tar
+alias ltar="tar -ztvf"
+alias untar="tar -zxvf"
+alias ctar="tar -cvzf"
 
 # git
 alias gs="git status"

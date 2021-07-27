@@ -30,7 +30,7 @@ alias ctar="tar -cvzf"
 alias gs="git status"
 alias ga="git add -u"
 alias gcm="git commit -m"
-alias gitl="git log --graph --decorate --oneline"
+alias gitl="git log --all --graph --decorate --oneline"
 
 # docker
 alias d="docker"

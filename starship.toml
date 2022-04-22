@@ -15,3 +15,10 @@ format = "[$path]($style)[$lock_symbol]($lock_style) "
 format = " [$symbol$branch]($style) "
 symbol = "🍣 "
 style = "bold yellow"
+
+[aws]
+format = ' on [$symbol($profile )(\($region\))]($style)'
+style = "bold yellow"
+
+[aws.region_aliases]
+eu-west-1 = "ew1"

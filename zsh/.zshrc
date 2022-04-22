@@ -1,5 +1,4 @@
 # Set up the prompt
-
 autoload -Uz promptinit
 promptinit
 #prompt adam1
@@ -53,7 +52,7 @@ zplug load
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' emacs-forward-word
 
-export PATH=~/repos/scripts:$PATH
+export PATH=$HOME/repos/scripts:$PATH
 
 # zsh-z
 source ~/repos/dotfiles/zsh/zsh-z.plugin.zsh
@@ -73,5 +72,11 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/repos
 source $HOME/.local/bin/virtualenvwrapper.sh
 
+# git
 export GIT_EDITOR=vim
-cd ~
+source $HOME/repos/github-token
+
+# lego
+source $HOME/lego-repos/legoenv.zsh
+
+cd

@@ -10,6 +10,8 @@ alias c="rsync -ah --info=progress2" # pretty copy
 alias v="view"
 alias diff="colordiff"
 alias clock="sudo hwclock --hctosys"
+alias code.="code ."
+alias less="less -R"
 
 # ls
 alias ls="ls --color=auto"
@@ -30,13 +32,29 @@ alias ctar="tar -cvzf"
 alias gs="git status"
 alias ga="git add -u"
 alias gcm="git commit -m"
+alias gcp="git cherry-pick"
 alias gitl="git log --all --graph --decorate --oneline"
+
+# virtualenvwrapper
+alias lsv="lsvirtualenv"
+alias mkv="mkvirtualenv"
+alias cv="workon"
+alias dv="deactivate"
 
 # docker
 alias d="docker"
 alias dps="docker ps"
 alias dc="docker-compose"
 alias dcr="dc down && dc up"
+
+# terraform
+alias t="terraform "
+alias ti="t init"
+alias ta="t apply --auto-approve"
+alias td="t destroy --auto-approve"
+
+# python
+#alias python3="python3.10"
 
 # faster config files edit
 alias ec="vim + ~/.zshrc"

@@ -12,9 +12,10 @@ alias diff="colordiff"
 alias clock="sudo hwclock --hctosys"
 alias code.="code ."
 alias less="less -R"
+t() { if [[ -z $1 ]]; then tree -h; else tree -hL $1; fi }
 
 # ls
-alias ls="ls --color=auto"
+alias ls="ls -h --color=auto"
 alias l="ls -l"
 alias ll="ls -lA"
 alias lt="ls --human-readable --size -1 -S --classify" # sort by size (human-readable)
@@ -46,15 +47,6 @@ alias d="docker"
 alias dps="docker ps"
 alias dc="docker-compose"
 alias dcr="dc down && dc up"
-
-# terraform
-alias t="terraform "
-alias ti="t init"
-alias ta="t apply --auto-approve"
-alias td="t destroy --auto-approve"
-
-# python
-#alias python3="python3.10"
 
 # faster config files edit
 alias ec="vim + ~/.zshrc"

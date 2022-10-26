@@ -13,12 +13,20 @@ format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [git_branch]
 format = " [$symbol$branch]($style) "
-symbol = "🍣 "
-style = "bold yellow"
+symbol = " "
+style = "bold green"
 
 [aws]
-format = ' on [$symbol($profile )(\($region\))]($style)'
-style = "bold yellow"
+format = ' on [$symbol($profile) $region]($style)'
+symbol="☁️ "
+style = "bold blue"
 
 [aws.region_aliases]
-eu-west-1 = "ew1"
+eu-west-1 = "dublin"
+eu-west-2 = "london"
+
+[package]
+disabled = true
+
+[nodejs]
+disabled = true

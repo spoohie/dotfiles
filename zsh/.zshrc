@@ -60,7 +60,7 @@ autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 
 # my-accept-line, `^M' is enter
-bindkey '^M' my-accept-line
+# bindkey '^M' my-accept-line
 
 # export exercism.io app
 export PATH=~/bin:$PATH
@@ -77,6 +77,5 @@ export GIT_EDITOR=vim
 source $HOME/repos/github-token
 
 # lego
-source $HOME/lego-repos/legoenv.zsh
+source $HOME/lego-repos/.legoenv.zsh
 
-cd

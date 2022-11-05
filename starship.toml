@@ -13,7 +13,7 @@ format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [git_branch]
 format = " [$symbol$branch]($style) "
-symbol = " "
+symbol = "🌱 "
 style = "bold green"
 
 [aws]

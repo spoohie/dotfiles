@@ -22,7 +22,7 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
+#eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -62,20 +62,18 @@ zstyle ':completion:*' menu select
 # my-accept-line, `^M' is enter
 # bindkey '^M' my-accept-line
 
-# export exercism.io app
-export PATH=~/bin:$PATH
-
 # python virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=$(which python3)
-export PATH=$HOME/.local/bin:$PATH
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/repos
-source $HOME/.local/bin/virtualenvwrapper.sh
+#export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+#export PATH=$HOME/.local/bin:$PATH
+#export WORKON_HOME=$HOME/.virtualenvs
+#export PROJECT_HOME=$HOME/repos
+#source $HOME/.local/bin/virtualenvwrapper.sh
 
 # git
 export GIT_EDITOR=vim
-source $HOME/repos/github-token
+#source $HOME/repos/github-token
 
-# lego
-source $HOME/lego-repos/.legoenv.zsh
-
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

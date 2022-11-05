@@ -1,4 +1,0 @@
-alias gs='git status'
-
-alias ..="cd .."
-alias ...="cd ../.."

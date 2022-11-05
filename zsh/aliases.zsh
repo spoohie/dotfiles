@@ -1,3 +1,7 @@
+# because i can
+alias sudo="sudo "
+alias kurwa="sudo"
+
 # miscellaneous
 alias e="vim"
 alias f="find . -iname"

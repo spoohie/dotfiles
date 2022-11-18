@@ -16,6 +16,13 @@ format = " [$symbol$branch]($style) "
 symbol = "🌱 "
 style = "bold green"
 
+[python]
+symbol = "🐍 "
+pyenv_version_name = false
+pyenv_prefix = "pyenv:"
+style = "bold yellow"
+disabled = false
+
 [aws]
 format = 'on [$symbol($profile) $region]($style)'
 symbol="☁️ "

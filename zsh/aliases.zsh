@@ -14,10 +14,8 @@ alias less="less -R"
 t() { if [[ -z $1 ]]; then tree -h; else tree -hL $1; fi }
 
 # ls
-alias ls="ls -h --color=auto"
-alias l="ls -l"
-alias ll="ls -lA"
-alias lt="ls --human-readable --size -1 -S --classify" # sort by size (human-readable)
+alias ls="exa"
+alias ll="exa -lah --icons"
 
 # cd
 alias ..="cd .."

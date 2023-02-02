@@ -3,13 +3,12 @@ alias sudo="sudo "
 alias kurwa="sudo"
 
 # miscellaneous
-alias e="vim"
+alias e="subl"
 alias f="find . -iname"
 alias g="grep --color=always -Rni"
 alias c="rsync -ah --info=progress2" # pretty copy
 alias v="view"
 alias diff="colordiff"
-alias clock="sudo hwclock --hctosys"
 alias code.="code ."
 alias less="less -R"
 t() { if [[ -z $1 ]]; then tree -h; else tree -hL $1; fi }

@@ -46,7 +46,7 @@ zplug "yous/vanilli.sh"
 #zplug "plugins/fasd", from:oh-my-zsh
 
 zplug "~/repos/dotfiles/zsh", use:"{aliases,my-accept-line,up}.zsh", from:local
-
+zplug "~/graphyte-repos/scripts", use:"aliases.zsh", from:local
 zplug load
 
 bindkey '^[[1;5D' backward-word
@@ -78,5 +78,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+PATH=$PATH:$HOME/.local/bin
+
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
 macchina

@@ -25,9 +25,13 @@ style = "bold yellow"
 disabled = false
 
 [aws]
-format = 'on [$symbol($profile) $region]($style)'
+format = '$symbol aws:[($profile) $region]($style)'
 symbol="💭"
 style = "bold blue"
+
+[gcloud]
+symbol=''
+format = ' gcp: [$symbol$active]($style) '
 
 [aws.region_aliases]
 eu-west-1 = "ireland"

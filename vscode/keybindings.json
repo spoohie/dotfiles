@@ -1,0 +1,19 @@
+// Place your key bindings in this file to override the defaults
+
+[
+    {
+        "key": "shift shift",
+        "command": "macros.myRuff",
+        "when": "editorLangId == python"
+    },
+    {
+        "key": "shift+cmd+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    }
+]

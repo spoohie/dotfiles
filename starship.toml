@@ -18,6 +18,7 @@ symbol = "🌱 "
 style = "bold green"
 
 [python]
+format='via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 symbol = "🐍 "
 pyenv_version_name = false
 pyenv_prefix = "pyenv:"
@@ -32,6 +33,7 @@ style = "bold blue"
 [gcloud]
 symbol=''
 format = ' gcp: [$symbol$active]($style) '
+disabled=true
 
 [aws.region_aliases]
 eu-west-1 = "ireland"

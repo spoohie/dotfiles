@@ -1,0 +1,30 @@
+lint.select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
+    #"PL", # pylint
+]
+lint.ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "W191", # indentation contains tabs
+]
+
+line-length = 100
+
+# Avoid trying to fix flake8-bugbear (`B`) violations.
+lint.unfixable = ["B"]
+
+# Ignore `E402` (import violations) in all `__init__.py` files, and in select subdirectories.
+#[lint.per-file-ignores]
+#"__init__.py" = ["E402"]
+#"**/{tests,docs,tools}/*" = ["E402"]
+
+#[format]
+# Use single quotes for non-triple-quoted strings.
+#quote-style = "single"

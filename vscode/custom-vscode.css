@@ -5,7 +5,7 @@
 } */
 
 .monaco-breadcrumbs {
-    font-family: 'Hack', monospace !important;
+    font-family: 'Hack Nerd Font', monospace !important;
     font-size: 12px !important;
 }
 
@@ -13,7 +13,7 @@
     position: relative !important;
     width: 10px !important;
     font-size: 12px !important;
-    font-family: 'Hack' !important;
+    font-family: 'Hack Nerd Font' !important;
     opacity: .3;
 }
 
@@ -25,12 +25,12 @@
 
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab .tab-label a,
 .monaco-workbench .part.editor > .content .editor-group-container > .title .title-label a {
-    font-family: "Hack", monospace !important;
+    font-family: "Hack Nerd Font", monospace !important;
     font-size: 12px !important;
 }
 
 .monaco-workbench .part.statusbar {
-    font-family: "Hack", monospace !important;
+    font-family: "Hack Nerd Font", monospace !important;
     font-size: 10px !important;
 }
 
@@ -67,10 +67,10 @@
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row
-.monaco-icon-label .label-name {
-    font-family: 'Hack', monospace !important;
+.label-name {
+    font-family: 'Hack Nerd Font', monospace !important;
     font-size: 11px !important;
-    font-weight: 200 !important;
+    /* font-weight: 1000 !important; */
     color: #FFF !important;
 }
 
@@ -140,7 +140,7 @@
 
 /* Search Label */
 .search-label {
-    font-family: 'Hack', monospace !important;
+    font-family: 'Hack Nerd Font', monospace !important;
     font-size: 14px !important;
     color: #fff;
     display: block;
@@ -206,7 +206,7 @@
     padding: 8px !important;
     border: none !important;
     background-color: rgba(34, 34, 34, .40) !important;
-    font-family: "Hack", monospace !important;
+    font-family: "Hack Nerd Font", monospace !important;
     font-size: 14px !important;
     margin-bottom: 16px !important;
 }

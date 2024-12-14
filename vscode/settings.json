@@ -5,58 +5,68 @@
 		"markdown",
 		"scminput"
 	],
+
+
+
 	// Editor
-	"editor.fontFamily": "Hack Nerd Font, Fira Code, Hack, 'Courier New', monospace",
-	"editor.inlineSuggest.enabled": true,
-	"editor.minimap.enabled": false,
-	"editor.unicodeHighlight.ambiguousCharacters": false,
-	"editor.unicodeHighlight.invisibleCharacters": false,
-	"explorer.autoReveal": false,
-	"explorer.confirmDelete": false,
-	"explorer.confirmDragAndDrop": false,
-	"explorer.excludeGitIgnore": true,
-	"files.autoSave": "onFocusChange",
-	"files.autoSaveWhenNoErrors": true,
-	"files.autoSaveWorkspaceFilesOnly": true,
-	"files.exclude": {
-		".git": true,
-		".venv": true,
-		"**/.venv": true,
-		"**/.idea": true,
-		"**/__pycache__": true,
-		"**/.DS_Store": true,
-		"**/cdk.out": true
-	},
-	"notebook.output.textLineLimit": 60,
-	"search.useIgnoreFiles": false,
-	"security.workspace.trust.untrustedFiles": "open",
-	"terminal.integrated.enableMultiLinePasteWarning": "never",
-	"terminal.integrated.fontFamily": "Hack Nerd Font",
-	"terminal.integrated.fontSize": 13,
-	"workbench.colorCustomizations": {
-		"tree.indentGuidesStroke": "#98c37990"
-	},
-	"workbench.colorTheme": "Atom One Dark",
-	"workbench.editor.openPositioning": "first",
-	"workbench.editorLargeFileConfirmation": 200,
-	"workbench.iconTheme": "vscode-icons",
-	"workbench.productIconTheme": "fluent-icons",
-	"workbench.tree.indent": 20,
-	"workbench.tree.renderIndentGuides": "always",
-	"editor.snippetSuggestions": "top",
 	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"workbench.editor.pinnedTabsOnSeparateRow": true,
-	"window.density.editorTabHeight": "compact",
-	"workbench.editor.limit.enabled": true,
-	"workbench.editor.limit.value": 8,
-	"editor.fontSize": 11,
-	// Custom theme
-	"vscode_custom_css.imports": [
-		"file:///Users/karol.platkowski/repos/dotfiles/vscode/custom-vscode.css",
-		"file:///Users/karol.platkowski/repos/dotfiles/vscode/vscode-script.js",
-	],
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.fontFamily": "Hack Nerd Font, Fira Code, Hack, 'Courier New', monospace",
+    "editor.fontSize": 11,
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.snippetSuggestions": "top",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "explorer.autoReveal": true,
+    "explorer.autoRevealExclude": {
+        "**/.venv": true,
+        "**/cdk.out": true
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.excludeGitIgnore": true,
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveWhenNoErrors": true,
+    "files.autoSaveWorkspaceFilesOnly": true,
+    "files.exclude": {
+        ".git": true,
+        ".venv": true,
+        "**/.venv": true,
+        "**/.idea": true,
+        "**/__pycache__": true,
+        "**/.DS_Store": true,
+        "**/cdk.out": true
+    },
+    "notebook.output.textLineLimit": 60,
+    "search.useIgnoreFiles": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+	"terminal.integrated.fontFamily": "Hack Nerd Font",
+    "terminal.integrated.tabs.location": "left",
+    "vscode_custom_css.imports": [
+        "file:///Users/karol.platkowski/repos/dotfiles/vscode/custom-vscode.css",
+        "file:///Users/karol.platkowski/repos/dotfiles/vscode/vscode-script.js"
+    ],
+    "window.density.editorTabHeight": "compact",
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#98c37990"
+    },
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 8,
+    "workbench.editor.openPositioning": "first",
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+
+
+
 	// Python
 	"[python]": {
 		"editor.defaultFormatter": "charliermarsh.ruff"
@@ -81,6 +91,9 @@
 			"ruff.executeAutofix"
 		]
 	},
+
+
+
 	// Extensions
 	"gitlens.hovers.currentLine.over": "line",
 	"markdown.preview.scrollEditorWithPreview": true,
@@ -104,4 +117,8 @@
 	"vsicons.dontShowNewVersionMessage": true,
 	"vscode-pets.theme": "forest",
 
+
+
+	// New
+	
 }

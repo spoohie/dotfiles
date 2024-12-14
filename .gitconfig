@@ -7,3 +7,7 @@
     squash = "!git rebase -v -i $(git mainbranch)"
     publish = push origin HEAD --force-with-lease
     pub = publish 
+
+[core]
+    editor = vim
+    excludesfile = ~/repos/dotfiles/.gitignore_global

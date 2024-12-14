@@ -1,0 +1,46 @@
+# Python-generated files
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+*.DS_Store
+*__pycache__*
+
+# Local test
+ltest_*.py
+
+# Virtual environments
+.venv
+
+# Env file
+.env
+
+# AWS CDK output
+cdk.out/
+
+# Logs
+*.log
+
+# Compiled files
+*.class
+*.o
+*.so
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+*.orig
+*.rej
+
+# IDE and editor settings
+.vscode/
+*.iml
+
+# OS-specific files
+*.lnk
+
+# pem files
+*.pem
+

@@ -9,12 +9,15 @@ alias g="grep --color=always -Rni"
 alias c="rsync -ah --info=progress2" # pretty copy
 alias v="view"
 alias diff="colordiff"
-alias code.="code ."
+alias cur="cursor"
+alias code="cursor"
+alias code.="cursor ."
 alias less="less -R"
 t() { if [[ -z $1 ]]; then tree -h; else tree -hL $1; fi }
 
 # ls
-alias ll="exa -lah --icons"
+alias ll="eza -lah --icons"
+alias lls="eza -lah --icons --total-size"
 
 # cd
 alias ..="cd .."
@@ -42,7 +45,8 @@ gdl() { curr="$(git rev-parse --abbrev-ref HEAD)"; if [ "$curr" = "$1" ]; then e
 #alias av="pyenv activate"
 #alias dv="pyenv deactivate"
 
-# uv
+# venv
+alias mkv="python3 -m venv .venv"
 alias av="source .venv/bin/activate"
 alias dv="deactivate"
 

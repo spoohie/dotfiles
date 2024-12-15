@@ -1,3 +1,34 @@
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "cdk.out",
+    ".vscode",
+    ".pytest_cache",
+    ".build",
+    ".mypy_cache",
+    ".github",
+]
+
 lint.select = [
     "E",  # pycodestyle errors
     "W",  # pycodestyle warnings
@@ -8,23 +39,28 @@ lint.select = [
     "UP", # pyupgrade
     #"PL", # pylint
 ]
+
 lint.ignore = [
     "E501",  # line too long, handled by black
     "B008",  # do not perform function calls in argument defaults
     "C901",  # too complex
-    "W191", # indentation contains tabs
+    "W191",  # indentation contains tabs
+    "E203",
+    "E266"
 ]
 
-line-length = 100
+line-length = 150
+indent-width = 4
 
 # Avoid trying to fix flake8-bugbear (`B`) violations.
 lint.unfixable = ["B"]
 
 # Ignore `E402` (import violations) in all `__init__.py` files, and in select subdirectories.
-#[lint.per-file-ignores]
-#"__init__.py" = ["E402"]
-#"**/{tests,docs,tools}/*" = ["E402"]
+[lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/{tests,docs,tools}/*" = ["E402"]
 
-#[format]
-# Use single quotes for non-triple-quoted strings.
-#quote-style = "single"
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"

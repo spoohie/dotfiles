@@ -17,7 +17,7 @@ t() { if [[ -z $1 ]]; then tree -h; else tree -hL $1; fi }
 
 # ls
 alias ll="eza -lah --icons"
-alias lls="eza -lah --icons --total-size"
+alias lls="eza -lah --icons --total-size -s size"
 
 # cd
 alias ..="cd .."

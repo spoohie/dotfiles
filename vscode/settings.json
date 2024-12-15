@@ -54,7 +54,7 @@
     "workbench.colorCustomizations": {
         "tree.indentGuidesStroke": "#98c37990"
     },
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "GitHub Dark",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 8,
     "workbench.editor.openPositioning": "first",
@@ -137,6 +137,7 @@
 	"markdown-preview-enhanced.codeBlockTheme": "dark.css",
 	"markdown-preview-enhanced.previewTheme": "github-dark.css",
 	"go.toolsManagement.autoUpdate": true,
+	"git.openRepositoryInParentFolders": "never",
 
 
 

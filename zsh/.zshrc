@@ -1,7 +1,6 @@
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
-#prompt adam1
 
 setopt histignorealldups sharehistory
 
@@ -10,7 +9,7 @@ bindkey -e
 
 HISTSIZE=10000000
 SAVEHIST=10000000
-HISTORY_IGNORE="(ls|cd|pwd|exit|cd|gcm|gs|gu)*"
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd|gcm|gs|gu|lls|rm)*"
 HISTFILE=~/.zsh_history
 
 setopt EXTENDED_HISTORY      # Write the history file in the ':start:elapsed;command' format.
@@ -38,7 +37,6 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-#eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -55,11 +53,7 @@ eval $(starship init zsh)
 
 source ~/.zplug/init.zsh
 
-#zplug "zpm-zsh/tmux"
-
 zplug "yous/vanilli.sh"
-
-#zplug "plugins/fasd", from:oh-my-zsh
 
 zplug "~/repos/dotfiles/zsh", use:"{aliases,my-accept-line,up}.zsh", from:local
 zplug "~/graphyte-repos/scripts", use:"aliases.zsh", from:local
@@ -75,35 +69,10 @@ source ~/repos/dotfiles/zsh/zsh-z.plugin.zsh
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 
+# my-accept-line
 # my-accept-line, `^M' is enter
 # bindkey '^M' my-accept-line
 
-# python virtualenvwrapper
-#export VIRTUALENVWRAPPER_PYTHON=$(which python3)
-#export PATH=$HOME/.local/bin:$PATH
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/repos
-#source $HOME/.local/bin/virtualenvwrapper.sh
-
-# git
-export GIT_EDITOR=vim
-#source $HOME/repos/github-token
-
-# pyenv
-#export PYENV_ROOT="$HOME/.pyenv"
-#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
-PATH=$PATH:$HOME/.local/bin
-
-# kafka-cli
-PATH=$PATH:$HOME/kafka-cli/bin
-
-# source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-
-# macchina
 
 # bun completions
 [ -s "/Users/karol.platkowski/.bun/_bun" ] && source "/Users/karol.platkowski/.bun/_bun"
@@ -111,3 +80,7 @@ PATH=$PATH:$HOME/kafka-cli/bin
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+PATH=$PATH:$HOME/.local/bin

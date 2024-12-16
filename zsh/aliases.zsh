@@ -31,6 +31,10 @@ alias gitl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 gdl() { curr="$(git rev-parse --abbrev-ref HEAD)"; if [ "$curr" = "$1" ]; then echo "Detaching..." && git checkout --detach; fi &&  git branch -D $1 && git push origin --delete $1}
 #alias gitl="git log --all --graph --decorate --oneline"
 
+# python
+alias p="python3"
+alias p3="python3"
+
 # venv
 alias mkv="python3 -m venv .venv"
 alias av="source .venv/bin/activate"

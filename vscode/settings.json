@@ -54,7 +54,7 @@
     },
     "workbench.colorTheme": "Theme Darker",
     "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 8,
+    "workbench.editor.limit.value": 12,
     "workbench.editor.openPositioning": "first",
     "workbench.editor.pinnedTabsOnSeparateRow": true,
 	"workbench.iconTheme": "material-icon-theme",

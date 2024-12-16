@@ -41,12 +41,10 @@
     },
     "notebook.output.textLineLimit": 60,
     "search.useIgnoreFiles": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.cursorStyle": "line",
+	"security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
 	"terminal.integrated.fontFamily": "Hack Nerd Font",
-    "terminal.integrated.tabs.location": "left",
     "vscode_custom_css.imports": [
         "file:///Users/karol.platkowski/repos/dotfiles/vscode/custom-vscode.css",
         "file:///Users/karol.platkowski/repos/dotfiles/vscode/vscode-script.js"
@@ -54,13 +52,12 @@
     "workbench.colorCustomizations": {
         "tree.indentGuidesStroke": "#98c37990"
     },
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "Theme Darker",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 8,
     "workbench.editor.openPositioning": "first",
     "workbench.editor.pinnedTabsOnSeparateRow": true,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.productIconTheme": "fluent-icons",
+	"workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 20,
     "workbench.tree.renderIndentGuides": "always",
 	"workbench.editor.tabSizing": "fixed",
@@ -81,6 +78,36 @@
 	"explorer.fileNesting.enabled": true,
 	"window.confirmSaveUntitledWorkspace": false,
 	"workbench.commandPalette.history": 10,
+	"workbench.sideBar.location": "right",
+	"terminal.external.linuxExec": "warp",
+	"terminal.integrated.useWslProfiles": false,
+	"terminal.integrated.smoothScrolling": true,
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"comment",
+					"comment.block",
+					"comment.block.documentation",
+					"comment.line",
+					"entity.other.inherited-class",
+					"string",
+					"string.interpolated",
+					"string.other",
+					"string.quoted",
+					"string.quoted.double",
+					"string.quoted.other",
+					"string.quoted.single",
+					"string.quoted.triple",
+					"string.regexp",
+					"string.unquoted",
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			}
+		]
+	},
 	
 	
 	
@@ -138,8 +165,10 @@
 	"markdown-preview-enhanced.previewTheme": "github-dark.css",
 	"go.toolsManagement.autoUpdate": true,
 	"git.openRepositoryInParentFolders": "never",
-
-
+	"gitlens.graph.layout": "editor",
+	"gitlens.showWhatsNewAfterUpgrades": false,
+	"gitlens.plusFeatures.enabled": false,
+	"gitlens.telemetry.enabled": false,
 
 	// New
 	

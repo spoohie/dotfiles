@@ -1,3 +1,7 @@
+.monaco-workbench {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
 .monaco-breadcrumbs {
     font-family: 'Hack Nerd Font', monospace !important;
     font-size: 10px !important;

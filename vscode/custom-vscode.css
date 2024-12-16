@@ -60,13 +60,30 @@
     color: #FFF !important;
 }
 
+.sidebar2-compositeComponent .pane-header {
+    font-family: 'Hack Nerd Font', monospace !important;
+}
+
 /* Command Palette Item Label */
 .quick-input-widget .monaco-tree .monaco-tree-row .label-name,
 .quick-input-widget .monaco-list .monaco-list-row
 .label-name {
     font-family: 'Hack Nerd Font', monospace !important;
     font-size: 12px !important;
-    color: #FFF !important;
+    color: #ffffffbd !important;
+}
+
+.quick-input-widget .quick-input-list-separator {
+    font-family: 'Hack Nerd Font', monospace !important;
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, .3) !important;
+}
+
+.quick-input-widget .quick-input-list-label-meta {
+    color: rgba(255, 255, 255, .3) !important; 
+    font-size: 10px !important;
+    font-style: italic !important;
+    text-indent: 5px !important;
 }
 
 /* Sidebar top shadow */
@@ -120,7 +137,6 @@
     border: none !important
 }
 
-/* Project title's style at the top. */
 .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
     border: none !important;
     background: transparent !important;
@@ -217,5 +233,9 @@
 
 .command-center-center {
     width:  auto !important;
+}
+
+.monaco-workbench .composite-bar-container .monaco-action-bar {
+    font-family: "Hack Nerd Font", monospace !important;
 }
 

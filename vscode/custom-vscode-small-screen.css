@@ -4,7 +4,7 @@
 
 .monaco-breadcrumbs {
     font-family: 'Hack Nerd Font', monospace !important;
-    font-size: 11px !important;
+    font-size: 10px !important;
 }
 
 .line-numbers {
@@ -24,7 +24,7 @@
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab .tab-label a,
 .monaco-workbench .part.editor > .content .editor-group-container > .title .title-label a {
     font-family: "Hack Nerd Font", monospace !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
 }
 
 .monaco-workbench .part.statusbar {
@@ -56,13 +56,12 @@
 .sidebar2-compositeComponent .monaco-list .monaco-list-row
 .label-name {
     font-family: 'Hack Nerd Font', monospace !important;
-    font-size: 11px !important;
+    font-size: 10px !important;
     color: #FFF !important;
 }
 
 .sidebar2-compositeComponent .pane-header {
     font-family: 'Hack Nerd Font', monospace !important;
-    font-size: 13px !important;
 }
 
 /* Command Palette Item Label */
@@ -70,19 +69,19 @@
 .quick-input-widget .monaco-list .monaco-list-row
 .label-name {
     font-family: 'Hack Nerd Font', monospace !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     color: #ffffffbd !important;
 }
 
 .quick-input-widget .quick-input-list-separator {
     font-family: 'Hack Nerd Font', monospace !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     color: rgba(255, 255, 255, .3) !important;
 }
 
 .quick-input-widget .quick-input-list-label-meta {
     color: rgba(255, 255, 255, .3) !important; 
-    font-size: 11px !important;
+    font-size: 10px !important;
     font-style: italic !important;
     text-indent: 5px !important;
 }
@@ -146,7 +145,7 @@
 /* Search Label */
 .search-label {
     font-family: 'Hack Nerd Font', monospace !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
     color: #fff;
     display: block;
 }

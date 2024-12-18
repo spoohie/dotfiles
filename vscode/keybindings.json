@@ -33,7 +33,7 @@
         "command": "-workbench.action.showAllSymbols"
     },
     {
-        "key": "shift+cmd+4",
+        "key": "shift+cmd+end",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },

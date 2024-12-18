@@ -17,6 +17,14 @@ format = " [$symbol$branch]($style) "
 symbol = "🌱 "
 style = "bold green"
 
+[custom.github]
+disabled=true
+description = "Show current GitHub user in Git repositories"
+command = "gh auth status -a | grep 'Logged in' | awk '{print $7}'"
+when = "git rev-parse --is-inside-work-tree 2>/dev/null"
+style = "bold blue"
+format = " [$output]($style) "
+
 [python]
 format='via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 symbol = "🐍 "

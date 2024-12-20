@@ -44,7 +44,7 @@
 	"security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
-	"terminal.integrated.fontFamily": "Hack Nerd Font",
+	"terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
     "vscode_custom_css.imports": [
         "file:///Users/karol.platkowski/repos/dotfiles/vscode/custom-vscode.css",
         "file:///Users/karol.platkowski/repos/dotfiles/vscode/vscode-script.js"
@@ -78,7 +78,6 @@
 	"explorer.fileNesting.enabled": true,
 	"window.confirmSaveUntitledWorkspace": false,
 	"workbench.commandPalette.history": 10,
-	"workbench.sideBar.location": "right",
 	"terminal.external.linuxExec": "warp",
 	"terminal.integrated.useWslProfiles": false,
 	"terminal.integrated.smoothScrolling": true,

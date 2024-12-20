@@ -49,9 +49,11 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-eval $(starship init zsh)
+eval "$(starship init zsh)"
 
-source ~/.zplug/init.zsh
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
+source <(fzf --zsh)
 
 zplug "yous/vanilli.sh"
 

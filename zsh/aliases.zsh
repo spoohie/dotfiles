@@ -32,8 +32,8 @@ gdl() { curr="$(git rev-parse --abbrev-ref HEAD)"; if [ "$curr" = "$1" ]; then e
 #alias gitl="git log --all --graph --decorate --oneline"
 
 # python
-alias p="python3"
-alias p3="python3"
+alias p="python"
+alias p3="python"
 
 # venv
 alias mkv="python3 -m venv .venv"

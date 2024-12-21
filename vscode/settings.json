@@ -1,15 +1,12 @@
 {
-	// Cursor
-	"cursor.cpp.disabledLanguages": [
-		"plaintext",
-		"markdown",
-		"scminput"
-	],
-
-
-
-	// Editor
-	"[json]": {
+    // Cursor
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "markdown",
+        "scminput"
+    ],
+    // Editor
+    "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "editor.fontFamily": "Hack Nerd Font, Fira Code, Hack, 'Courier New', monospace",
@@ -41,14 +38,14 @@
     },
     "notebook.output.textLineLimit": 60,
     "search.useIgnoreFiles": false,
-	"security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
-	"terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
     "vscode_custom_css.imports": [
         "file:///Users/karol.platkowski/repos/dotfiles/vscode/custom-vscode.css",
         "file:///Users/karol.platkowski/repos/dotfiles/vscode/vscode-script.js"
-	],
+    ],
     "workbench.colorCustomizations": {
         "tree.indentGuidesStroke": "#98c37990"
     },
@@ -57,115 +54,107 @@
     "workbench.editor.limit.value": 12,
     "workbench.editor.openPositioning": "first",
     "workbench.editor.pinnedTabsOnSeparateRow": true,
-	"workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 20,
     "workbench.tree.renderIndentGuides": "always",
-	"workbench.editor.tabSizing": "fixed",
-	"workbench.editor.tabSizingFixedMaxWidth": 120,
-	"editor.lineDecorationsWidth": 0,
-	"workbench.editorAssociations": {
-	"*.md": "markdown-preview-enhanced",
-	"*.markdown": "markdown-preview-enhanced",
-		"*.mdown": "markdown-preview-enhanced",
-		"*.mkdn": "markdown-preview-enhanced",
-		"*.mkd": "markdown-preview-enhanced",
-		"*.rmd": "markdown-preview-enhanced",
-		"*.qmd": "markdown-preview-enhanced",
-		"*.mdx": "markdown-preview-enhanced"
-	},
-	"zenMode.hideLineNumbers": false,
-	"explorer.confirmPasteNative": false,
-	"explorer.fileNesting.enabled": true,
-	"window.confirmSaveUntitledWorkspace": false,
-	"workbench.commandPalette.history": 10,
-	"terminal.external.linuxExec": "warp",
-	"terminal.integrated.useWslProfiles": false,
-	"terminal.integrated.smoothScrolling": true,
-	"editor.tokenColorCustomizations": {
-		"textMateRules": [
-			{
-				"scope": [
-					"comment",
-					"comment.block",
-					"comment.block.documentation",
-					"comment.line",
-					"entity.other.inherited-class",
-					"string",
-					"string.interpolated",
-					"string.other",
-					"string.quoted",
-					"string.quoted.double",
-					"string.quoted.other",
-					"string.quoted.single",
-					"string.quoted.triple",
-					"string.regexp",
-					"string.unquoted"
-				],
-				"settings": {
-					"fontStyle": "italic"
-				}
-			}
-		]
-	},
-	
-	
-	
-	// Python
-	"[python]": {
-		"editor.defaultFormatter": "charliermarsh.ruff"
-	},
-	"python.analysis.ignore": [
-		"*"
-	],
-	"python.analysis.inlayHints.functionReturnTypes": true,
-	"python.createEnvironment.trigger": "off",
-	"python.defaultInterpreterPath": "~/.local/bin/python",
-	"python.terminal.activateEnvironment": true,
-	// "python.experiments.optOutFrom": ["pythonTerminalEnvVarActivation"],
-	"ruff.configuration": "--config=/Users/karol.platkowski/.ruff.toml",
-	"ruff.nativeServer": "on",
-	"ruff.logLevel": "info",
-	"macros": {
-		"myRuff": [
-			"ruff.executeFormat",
-			"ruff.executeAutofix"
-		]
-	},
-
-
-
-	// Extensions
-	"gitlens.hovers.currentLine.over": "line",
-	"markdown.preview.scrollEditorWithPreview": true,
-	"markdown.preview.scrollPreviewWithEditor": true,
-	"projectManager.git.baseFolders": [
-		"/Users/karol.platkowski/repos"
-	],
-	"projectManager.git.ignoredFolders": [
-		"node_modules",
-		"out",
-		"typings",
-		"test",
-		".haxelib",
-		"graphyte-repos",
-		".archive"
-	],
-	"projectManager.git.maxDepthRecursion": 1,
-	"sqlite.recordsPerPage": 100,
-	"vscode-pets.petSize": "medium",
-	"vscode-pets.throwBallWithMouse": true,
-	"vsicons.dontShowNewVersionMessage": true,
-	"vscode-pets.theme": "forest",
-	"markdown-preview-enhanced.previewMode": "Previews Only",
-	"markdown-preview-enhanced.codeBlockTheme": "dark.css",
-	"markdown-preview-enhanced.previewTheme": "github-dark.css",
-	"go.toolsManagement.autoUpdate": true,
-	"git.openRepositoryInParentFolders": "never",
-	"gitlens.graph.layout": "editor",
-	"gitlens.showWhatsNewAfterUpgrades": false,
-	"gitlens.plusFeatures.enabled": false,
-	"gitlens.telemetry.enabled": false
-
-	// New
-	
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.tabSizingFixedMaxWidth": 120,
+    "editor.lineDecorationsWidth": 0,
+    "workbench.editorAssociations": {
+        "*.md": "markdown-preview-enhanced",
+        "*.markdown": "markdown-preview-enhanced",
+        "*.mdown": "markdown-preview-enhanced",
+        "*.mkdn": "markdown-preview-enhanced",
+        "*.mkd": "markdown-preview-enhanced",
+        "*.rmd": "markdown-preview-enhanced",
+        "*.qmd": "markdown-preview-enhanced",
+        "*.mdx": "markdown-preview-enhanced"
+    },
+    "zenMode.hideLineNumbers": false,
+    "explorer.confirmPasteNative": false,
+    "explorer.fileNesting.enabled": true,
+    "window.confirmSaveUntitledWorkspace": false,
+    "workbench.commandPalette.history": 10,
+    "terminal.external.linuxExec": "warp",
+    "terminal.integrated.useWslProfiles": false,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "comment.block",
+                    "comment.block.documentation",
+                    "comment.line",
+                    "entity.other.inherited-class",
+                    "string",
+                    "string.interpolated",
+                    "string.other",
+                    "string.quoted",
+                    "string.quoted.double",
+                    "string.quoted.other",
+                    "string.quoted.single",
+                    "string.quoted.triple",
+                    "string.regexp",
+                    "string.unquoted"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    // Python
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "python.analysis.ignore": [
+        "*"
+    ],
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.createEnvironment.trigger": "off",
+    "python.defaultInterpreterPath": "~/.local/bin/python",
+    "python.terminal.activateEnvironment": true,
+    // "python.experiments.optOutFrom": ["pythonTerminalEnvVarActivation"],
+    "ruff.configuration": "--config=${env:REPOS}/.ruff.toml",
+    "ruff.nativeServer": "on",
+    "ruff.logLevel": "info",
+    "macros": {
+        "myRuff": [
+            "ruff.executeFormat",
+            "ruff.executeAutofix"
+        ]
+    },
+    // Extensions
+    "gitlens.hovers.currentLine.over": "line",
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "projectManager.git.baseFolders": [
+        "${env:REPOS}/repos"
+    ],
+    "projectManager.git.ignoredFolders": [
+        "node_modules",
+        "out",
+        "typings",
+        "test",
+        ".haxelib",
+        "graphyte-repos",
+        ".archive"
+    ],
+    "projectManager.git.maxDepthRecursion": 1,
+    "sqlite.recordsPerPage": 100,
+    "vscode-pets.petSize": "medium",
+    "vscode-pets.throwBallWithMouse": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "vscode-pets.theme": "forest",
+    "markdown-preview-enhanced.previewMode": "Previews Only",
+    "markdown-preview-enhanced.codeBlockTheme": "dark.css",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "go.toolsManagement.autoUpdate": true,
+    "git.openRepositoryInParentFolders": "never",
+    "gitlens.graph.layout": "editor",
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.telemetry.enabled": false
+    // New
 }

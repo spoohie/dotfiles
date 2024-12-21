@@ -49,4 +49,4 @@ alias code.="cursor ."
 # faster config files edit
 alias ec="vim + ~/.zshrc"
 alias sc="source ~/.zshrc"
-alias ea="vim ~/repos/dotfiles/zsh/aliases.zsh"
+alias ea="vim $DOTFILES/zsh/aliases.zsh"

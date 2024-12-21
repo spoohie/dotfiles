@@ -1,3 +1,7 @@
+# Dotfiles path
+export REPOS=$HOME/repos
+export DOTFILES=$REPOS/dotfiles
+
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
@@ -57,7 +61,7 @@ source <(fzf --zsh)
 
 zplug "yous/vanilli.sh"
 
-zplug "~/repos/dotfiles/zsh", use:"{aliases,my-accept-line,up}.zsh", from:local
+zplug "$DOTFILES/zsh", use:"{aliases,my-accept-line,up}.zsh", from:local
 zplug "~/graphyte-repos/scripts", use:"aliases.zsh", from:local
 zplug load
 
@@ -67,7 +71,7 @@ bindkey '^[[1;5C' emacs-forward-word
 export PATH=$HOME/repos/scripts:$PATH
 
 # zsh-z
-source ~/repos/dotfiles/zsh/zsh-z.plugin.zsh
+source $DOTFILES/zsh/zsh-z.plugin.zsh
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 
@@ -77,7 +81,7 @@ zstyle ':completion:*' menu select
 
 
 # bun completions
-[ -s "/Users/karol.platkowski/.bun/_bun" ] && source "/Users/karol.platkowski/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

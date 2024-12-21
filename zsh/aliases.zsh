@@ -3,6 +3,7 @@ alias sudo="sudo "
 alias kurwa="sudo"
 
 # ls
+alias l="ls -laG"
 alias ll="eza -lah --icons"
 alias lls="eza -lah --icons --total-size -s size"
 

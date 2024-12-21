@@ -116,7 +116,6 @@
     "python.defaultInterpreterPath": "~/.local/bin/python",
     "python.terminal.activateEnvironment": true,
     // "python.experiments.optOutFrom": ["pythonTerminalEnvVarActivation"],
-    "ruff.configuration": "--config=${env:REPOS}/.ruff.toml",
     "ruff.nativeServer": "on",
     "ruff.logLevel": "info",
     "macros": {
@@ -130,7 +129,7 @@
     "markdown.preview.scrollEditorWithPreview": true,
     "markdown.preview.scrollPreviewWithEditor": true,
     "projectManager.git.baseFolders": [
-        "${env:REPOS}/repos"
+        "~/repos"
     ],
     "projectManager.git.ignoredFolders": [
         "node_modules",

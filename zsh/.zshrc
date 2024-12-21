@@ -2,6 +2,11 @@
 export REPOS=$HOME/repos
 export DOTFILES=$REPOS/dotfiles
 
+# Ensure a symlink to $HOME exists in the root directory
+if [[ ! -L /Users/Shared/repos && ! -e /Users/Shared/repos ]]; then
+  ln -s "$HOME/repos" /Users/Shared/repos
+fi
+
 # Set up the prompt
 autoload -Uz promptinit
 promptinit

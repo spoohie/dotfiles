@@ -44,8 +44,8 @@
     "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
     "vscode_custom_css.imports": [
 
-        "file:///Users/Shared/repos/dotfiles/vscode/custom-vscode.css",
-        "file:///Users/Shared/repos/dotfiles/vscode/vscode-script.js"
+        "file:///Users/Shared/dotfiles/vscode/custom-vscode.css",
+        "file:///Users/Shared/dotfiles/vscode/vscode-script.js"
     ],
     "workbench.colorCustomizations": {
         "tree.indentGuidesStroke": "#98c37990"

@@ -1,12 +1,3 @@
-# Dotfiles path
-export REPOS=$HOME/repos
-export DOTFILES=$REPOS/dotfiles
-
-# Ensure a symlink to $HOME exists in the root directory
-if [[ ! -L /Users/Shared/repos && ! -e /Users/Shared/repos ]]; then
-  ln -s "$HOME/repos" /Users/Shared/repos
-fi
-
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
@@ -97,3 +88,12 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 PATH=$PATH:$HOME/.local/bin
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# Dotfiles path
+export REPOS=$HOME/repos
+export DOTFILES=$REPOS/dotfiles
+
+# Ensure a symlink to dotfiles exists in Shared dir
+if [[ ! -L /Users/Shared/dotfiles && ! -e /Users/Shared/dotfiles ]]; then
+  ln -s "$HOME/repos/dotfiles" /Users/Shared/dotfiles
+fi

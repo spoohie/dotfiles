@@ -73,7 +73,7 @@ zstyle ':completion:*' menu select
 
 # my-accept-line
 # my-accept-line, `^M' is enter
-# bindkey '^M' my-accept-line
+bindkey '^M' my-accept-line
 
 
 # bun completions

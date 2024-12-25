@@ -1,11 +1,13 @@
+# Custom paths
+export REPOS=$HOME/repos
+export DOTFILES=$REPOS/dotfiles
+export PATH=$REPOS/scripts:$PATH
+
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
 
 setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
 
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -64,11 +66,6 @@ zplug load
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' emacs-forward-word
 
-# Custom paths
-export PATH=$HOME/repos/scripts:$PATH
-export REPOS=$HOME/repos
-export DOTFILES=$REPOS/dotfiles
-
 # zsh-z
 source $DOTFILES/zsh/zsh-z.plugin.zsh
 autoload -U compinit && compinit
@@ -94,5 +91,5 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Ensure a symlink to dotfiles exists in Shared dir
 if [[ ! -L /Users/Shared/dotfiles && ! -e /Users/Shared/dotfiles ]]; then
-  ln -s "$HOME/repos/dotfiles" /Users/Shared/dotfiles
+  ln -s $DOTFILES /Users/Shared/dotfiles
 fi

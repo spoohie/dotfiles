@@ -148,13 +148,13 @@
     "vsicons.dontShowNewVersionMessage": true,
     "vscode-pets.theme": "forest",
     "markdown-preview-enhanced.previewMode": "Previews Only",
-    "markdown-preview-enhanced.codeBlockTheme": "dark.css",
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
     "go.toolsManagement.autoUpdate": true,
     "git.openRepositoryInParentFolders": "never",
     "gitlens.graph.layout": "editor",
     "gitlens.showWhatsNewAfterUpgrades": false,
     "gitlens.plusFeatures.enabled": false,
-    "gitlens.telemetry.enabled": false
+    "gitlens.telemetry.enabled": false,
+    "markdown-preview-enhanced.codeBlockTheme": "github-dark.css"
     // New
 }

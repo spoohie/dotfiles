@@ -64,7 +64,10 @@ zplug load
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' emacs-forward-word
 
+# Custom paths
 export PATH=$HOME/repos/scripts:$PATH
+export REPOS=$HOME/repos
+export DOTFILES=$REPOS/dotfiles
 
 # zsh-z
 source $DOTFILES/zsh/zsh-z.plugin.zsh
@@ -88,10 +91,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 PATH=$PATH:$HOME/.local/bin
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# Dotfiles path
-export REPOS=$HOME/repos
-export DOTFILES=$REPOS/dotfiles
 
 # Ensure a symlink to dotfiles exists in Shared dir
 if [[ ! -L /Users/Shared/dotfiles && ! -e /Users/Shared/dotfiles ]]; then

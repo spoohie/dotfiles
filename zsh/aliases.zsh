@@ -19,6 +19,7 @@ alias c="rsync -ah --info=progress2" # pretty copy
 alias v="view"
 alias diff="colordiff"
 alias less="less -R"
+alias cat="bat"
 t() { if [[ -z $1 ]]; then tree -h; else tree -hL $1; fi }
 
 # git

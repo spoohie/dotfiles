@@ -8,11 +8,11 @@
 }
 
 .line-numbers {
-    position: relative !important;
+    /* position: relative !important; */
     width: 10px !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
     font-family: 'Hack Nerd Font' !important;
-    opacity: .3;
+    opacity: .8';
 }
 
 /* Code canvas top shadow */

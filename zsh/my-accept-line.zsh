@@ -5,7 +5,7 @@ my-accept-line () {
         # put newline so that the output does not start next to the prompt
         echo
 
-        ll --no-permissions --octal-permissions --no-user
+        ll --no-permissions --no-user
         # check if inside git repository
         if git rev-parse --git-dir > /dev/null 2>&1 ; then
             echo

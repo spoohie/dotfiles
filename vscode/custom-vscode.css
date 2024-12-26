@@ -57,12 +57,29 @@
 .label-name {
     font-family: 'Hack Nerd Font', monospace !important;
     font-size: 11px !important;
-    color: #FFF !important;
+    color: #ffffffc0 !important;
 }
 
 .sidebar2-compositeComponent .pane-header {
     font-family: 'Hack Nerd Font', monospace !important;
     font-size: 13px !important;
+}
+
+/* Search sidebar */
+.sidebar2-compositeComponent .search-view.actions-right,
+.sidebar2-compositeComponent .search-view.actions-right .search-widgets-container .monaco-findInput,
+.sidebar2-compositeComponent .search-view.actions-right .input {
+    font-family: 'Hack Nerd Font', monospace !important;
+}
+
+.sidebar2-compositeComponent .search-view.actions-right .monaco-list-row .monaco-tl-contents.linematch {
+    font-family: 'Hack Nerd Font', monospace !important;
+    font-size: 12px !important;
+}
+
+.sidebar2-compositeComponent .search-view.actions-right .messages.text-search-provider-messages {
+    font-family: 'Hack Nerd Font', monospace !important;
+    font-size: 11px !important;
 }
 
 /* Command Palette Item Label */
@@ -240,3 +257,8 @@
     font-family: "Hack Nerd Font", monospace !important;
 }
 
+.notifications-list-container .monaco-list-row,
+.notifications-list-container .monaco-list-row .monaco-button.monaco-text-button {
+    font-family: "Hack Nerd Font", monospace !important;
+    font-size: 11px !important;
+}

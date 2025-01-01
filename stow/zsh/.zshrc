@@ -61,8 +61,3 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=true
 
 # Path modifications
 PATH=$PATH:$HOME/.local/bin
-
-# Symlink setup
-if [[ ! -L /Users/Shared/dotfiles && ! -e /Users/Shared/dotfiles ]]; then
-  ln -s $DOTFILES /Users/Shared/dotfiles
-fi

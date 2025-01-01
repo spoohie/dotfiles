@@ -58,6 +58,7 @@ alias ec="vim + ~/.zshrc"
 alias sc="source ~/.zshrc"
 alias ea="vim + ~/.zshenv"
 
+# Up widget
 function up_widget() {
   BUFFER=".."
   zle accept-line

@@ -1,8 +1,3 @@
-# Custom paths
-export REPOS=$HOME/repos
-export DOTFILES=$REPOS/dotfiles
-export PATH=$REPOS/scripts:$PATH
-
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
@@ -26,14 +21,6 @@ setopt APPEND_HISTORY        # append to history file (Default)
 setopt HIST_NO_STORE         # Don't store history commands
 setopt HIST_REDUCE_BLANKS    # Remove superfluous blanks from each command line being added to the history.
 
-plugins=(git fzf)
-export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
-eval "$(fzf --zsh)"
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
@@ -53,35 +40,26 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 eval "$(starship init zsh)"
 
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
+source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
+
+export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
 source <(fzf --zsh)
 
-zplug "yous/vanilli.sh"
+zinit light yous/vanilli.sh
 
-zplug "$DOTFILES/zsh", use:"{aliases,my-accept-line,up}.zsh", from:local
-zplug "~/graphyte-repos/scripts", use:"aliases.zsh", from:local
-zplug load
+zinit snippet $DOTFILES/zsh/my-accept-line.zsh
+zinit snippet $DOTFILES/zsh/up.zsh
 
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' emacs-forward-word
 
-# zsh-z
-source $DOTFILES/zsh/zsh-z.plugin.zsh
-autoload -U compinit && compinit
+# Use modern completion system
+autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 
 # my-accept-line
 # my-accept-line, `^M' is enter
-bindkey '^M' my-accept-line
-
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# bindkey '^M' my-accept-line
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -93,3 +71,5 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 if [[ ! -L /Users/Shared/dotfiles && ! -e /Users/Shared/dotfiles ]]; then
   ln -s $DOTFILES /Users/Shared/dotfiles
 fi
+
+eval "$(zoxide init zsh)"

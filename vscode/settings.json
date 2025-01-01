@@ -50,7 +50,7 @@
     "workbench.colorCustomizations": {
         "tree.indentGuidesStroke": "#98c37990"
     },
-    "workbench.colorTheme": "Theme Darker",
+    "workbench.colorTheme": "Theme",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 12,
     "workbench.editor.openPositioning": "first",

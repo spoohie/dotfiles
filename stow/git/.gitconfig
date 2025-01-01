@@ -10,4 +10,4 @@
 
 [core]
     editor = vim
-    excludesfile = $DOTFILES/.gitignore_global
+    excludesfile = $DOTFILES/git/.gitignore_global

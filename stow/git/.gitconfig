@@ -10,6 +10,7 @@
 
 [core]
   editor = vim
+  pager = delta
   excludesfile = $DOTFILES/git/.gitignore_global
 [credential "https://github.com"]
 	helper = 
@@ -17,3 +18,18 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = side-by-side navigate decorations
+    syntax-theme = Visual Studio Dark+
+    plus-style = syntax "#003800"
+    minus-style = syntax "#3f0001"
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-decoration-style = cyan box ul
+[merge]
+    conflictstyle = zdiff3

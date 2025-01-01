@@ -7,7 +7,6 @@ set -o pipefail
 . apps.sh
 . brew.sh
 . config.sh
-. fonts.sh
 . osx.sh
 . packages.sh
 . utils.sh
@@ -32,13 +31,6 @@ main() {
 
     post_install_packages
     success "Finished installing Homebrew packages"
-
-    info "################################################################################"
-    info "Homebrew Fonts"
-    info "################################################################################"
-    wait_input
-    install_fonts
-    success "Finished installing fonts"
 
     info "################################################################################"
     info "MacOS Apps"

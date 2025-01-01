@@ -1,5 +1,5 @@
 taps=(
-	homebrew/cask
+    homebrew/cask
 )
 
 packages=(
@@ -26,18 +26,18 @@ packages=(
 )
 
 install_packages() {
-	info "Configuring taps"
-	apply_brew_taps "${taps[@]}"
+    info "Configuring taps"
+    apply_brew_taps "${taps[@]}"
 
-	info "Installing packages..."
-	install_brew_formulas "${packages[@]}"
+    info "Installing packages..."
+    install_brew_formulas "${packages[@]}"
 
-	info "Cleaning up brew packages..."
-	brew cleanup
+    info "Cleaning up brew packages..."
+    brew cleanup
 }
 
 post_install_packages() {
-	info "Installing fzf bindings"
-	# shellcheck disable=SC2046
-	$(brew --prefix)/opt/fzf/install
+    info "Installing fzf bindings"
+    # shellcheck disable=SC2046
+    $(brew --prefix)/opt/fzf/install
 }

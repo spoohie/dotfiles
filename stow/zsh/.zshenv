@@ -58,6 +58,13 @@ alias ec="vim + ~/.zshrc"
 alias sc="source ~/.zshrc"
 alias ea="vim + ~/.zshenv"
 
+function up_widget() {
+  BUFFER=".."
+  zle accept-line
+}
+
+zle -N up_widget
+
 # my-accept-line
 # ll (+ git status in repo) when ENTER
 my-accept-line () {

@@ -46,7 +46,9 @@ source <(fzf --zsh)
 # Zinit plugins and snippets
 zinit light yous/vanilli.sh
 zinit snippet $DOTFILES/zsh/my-accept-line.zsh
-zinit snippet $DOTFILES/zsh/up.zsh
+
+# Bindings
+bindkey "^k" up_widget
 
 # Completion system
 autoload -Uz compinit && compinit

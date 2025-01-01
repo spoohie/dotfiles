@@ -4,10 +4,12 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+. apps.sh
 . brew.sh
+. config.sh
 . fonts.sh
-. packages.sh
 . osx.sh
+. packages.sh
 . utils.sh
 
 cleanup() {
@@ -46,13 +48,6 @@ main() {
 
     install_masApps
     success "Finished installing macOS apps"
-
-    info "################################################################################"
-    info "Uv"
-    info "################################################################################"
-    wait_input
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    success "Finished installing UV"
 
     info "################################################################################"
     info "Configuration"

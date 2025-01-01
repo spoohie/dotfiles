@@ -11,9 +11,6 @@
 [core]
     editor = vim
     excludesfile = $DOTFILES/git/.gitignore_global
-[user]
-	name = spoohie
-	email = kplatkowski@outlook.com
 [credential "https://github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential

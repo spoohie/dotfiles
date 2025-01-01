@@ -5,6 +5,7 @@ set -o errexit
 
 REPO_URL=https://github.com/spoohie/dotfiles.git
 REPO_PATH="$HOME/repos/dotfiles"
+SHARED_DOTFILES=/Users/Shared/dotfiles
 
 reset_color=$(tput sgr 0)
 
@@ -57,6 +58,8 @@ brew install git
 
 info "Cloning dotfiles repo from $REPO_URL into $REPO_PATH"
 git clone "$REPO_URL" "$REPO_PATH"
+
+ln -s $REPO_PATH $SHARED_DOTFILES
 
 info "Change path to $REPO_PATH"
 cd "$REPO_PATH" >/dev/null

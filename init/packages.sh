@@ -4,23 +4,25 @@ taps=(
 
 packages=(
     awscli
-	bat        # https://github.com/sharkdp/bat
+    bat        # https://github.com/sharkdp/bat
     bitwarden-cli
-	eza        # https://github.com/eza-community/eza
-	fzf        # https://github.com/junegunn/fzf
     duti
-	jq
+    eza        # https://github.com/eza-community/eza
+    fzf        # https://github.com/junegunn/fzf
     gh
-	mas        # https://github.com/mas-cli/mas
-	node
-	python3
+    jq
+    make
+    mas        # https://github.com/mas-cli/mas
+    node
+    python3
+    ripgrep    # https://github.com/BurntSushi/ripgre
     ruff
-	ripgrep    # https://github.com/BurntSushi/ripgre
-	stow
+    starship
+    stow
     uv
-	wget
+    wget
     zinit      # https://github.com/zdharma-continuum/zinit
-	zoxide     # https://github.com/ajeetdsouza/zoxide
+    zoxide     # https://github.com/ajeetdsouza/zoxide
 )
 
 install_packages() {

@@ -1,7 +1,6 @@
 # Custom paths
 export REPOS=$HOME/repos
 export DOTFILES=$REPOS/dotfiles
-export PATH=$REPOS/scripts:$PATH
 
 # Aliases
 # because i can

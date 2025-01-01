@@ -1,3 +1,12 @@
+# Environment variables
+export HOMEBREW_NO_AUTO_UPDATE=1
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PYENV_VIRTUALENV_DISABLE_PROMPT=true
+
+# Path modifications
+PATH=$PATH:$HOME/.local/bin
+PATH=$REPOS/scripts:$PATH
+
 # History settings
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -17,6 +26,10 @@ setopt HIST_VERIFY                # Do not execute immediately upon history expa
 setopt histignorealldups sharehistory  # Enable history deduplication and sharing between sessions
 setopt INC_APPEND_HISTORY         # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY              # Share history between all sessions.
+
+# Completion system
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
 
 # Completion styling
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -49,15 +62,3 @@ zinit snippet $DOTFILES/zsh/my-accept-line.zsh
 
 # Bindings
 bindkey "^k" up_widget
-
-# Completion system
-autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
-
-# Environment variables
-export HOMEBREW_NO_AUTO_UPDATE=1
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-export PYENV_VIRTUALENV_DISABLE_PROMPT=true
-
-# Path modifications
-PATH=$PATH:$HOME/.local/bin

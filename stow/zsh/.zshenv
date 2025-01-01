@@ -54,7 +54,7 @@ alias code.="cursor ."
 
 # faster config files edit
 alias ec="vim + ~/.zshrc"
-alias sc="source ~/.zshrc"
+alias sc="source ~/.zshrc ~/.zshenv"
 alias ea="vim + ~/.zshenv"
 
 # Up widget

@@ -1,6 +1,7 @@
 # Custom paths
 export REPOS=$HOME/repos
 export DOTFILES=$REPOS/dotfiles
+export DELTA_PAGER="less $LESS"
 
 # Aliases
 # because i can
@@ -34,6 +35,7 @@ alias ga="git add"
 alias gu="git add -u"
 alias gcm="git commit -m"
 alias gcp="git cherry-pick"
+alias gd="git diff"
 alias gitl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
 gdl() { curr="$(git rev-parse --abbrev-ref HEAD)"; if [ "$curr" = "$1" ]; then echo "Detaching..." && git checkout --detach; fi &&  git branch -D $1 && git push origin --delete $1}
 #alias gitl="git log --all --graph --decorate --oneline"
@@ -54,7 +56,7 @@ alias code.="cursor ."
 
 # faster config files edit
 alias ec="vim + ~/.zshrc"
-alias sc="source ~/.zshrc ~/.zshenv"
+alias sc="source ~/.zshrc && source ~/.zshenv"
 alias ea="vim + ~/.zshenv"
 
 # Up widget

@@ -50,6 +50,10 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# Add aws completion
+# autoload -U +X bashcompinit && bashcompinit
+# complete -C '/opt/homebrew/bin/aws_completer' aws
+
 # auto cd if command is a directory name
 setopt auto_cd
 
@@ -58,6 +62,22 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 source <(fzf --zsh)
+
+# fzf completion
+source $DOTFILES/zsh/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+bindkey '^I' fzf_completion
+# press ctrl-r to repeat completion *without* accepting i.e. reload the completion
+# press right to accept the completion and retrigger it
+# press alt-enter to accept the completion and run it
+keys=(
+    ctrl-r:'repeat-fzf-completion'
+    right:accept:'repeat-fzf-completion'
+    alt-enter:accept:'zle accept-line'
+)
+
+zstyle ':completion:*' fzf-completion-keybindings "${keys[@]}"
+# also accept and retrigger completion when pressing / when completing cd
+zstyle ':completion::*:cd:*' fzf-completion-keybindings "${keys[@]}" /:accept:'repeat-fzf-completion'
 
 # Zinit plugins and snippets
 zinit light yous/vanilli.sh

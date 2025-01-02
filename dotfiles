@@ -60,6 +60,7 @@ brew install git
 info "Cloning dotfiles repo from $REPO_URL into $REPO_PATH"
 git clone "$REPO_URL" "$REPO_PATH"
 
+info "Creating symlink from $REPO_PATH to $SHARED_DOTFILES"
 ln -s $REPO_PATH $SHARED_DOTFILES
 
 info "Change path to $REPO_PATH"

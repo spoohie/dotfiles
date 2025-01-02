@@ -15,9 +15,9 @@ Summary:
 ## Apps
 Main apps:
 - Terminal: [Warp](https://www.warp.dev/)
+- Shell: [Starship](https://starship.rs/), zsh
 - IDE: [Cursor](https://www.cursor.com/)
 - Browser: Chrome, Firefox
-- Terminal: [Starship](https://starship.rs/), zsh
 
 ## Installation
 Run the `dotfiles` script:

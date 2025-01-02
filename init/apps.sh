@@ -4,7 +4,6 @@ apps=(
     cursor
     docker
     firefox
-    flux
     google-chrome
     itsycal
     microsoft-outlook

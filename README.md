@@ -26,5 +26,11 @@ Run the `dotfiles` script:
 curl -sO https://raw.githubusercontent.com/spoohie/dotfiles/master/dotfiles
 ```
 
+## Other
+- [f.lux](https://justgetflux.com/)
+- [DisplayLink](https://www.synaptics.com/products/displaylink-graphics/downloads/macos)
+- [LocalSend](https://localsend.org/pl)
+
+
 ## Credits
 Init scripts adapted based on [this](https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225q) article

@@ -25,6 +25,10 @@ brew "uv"
 brew "wget"
 brew "zinit"
 brew "zoxide"
+brew "gawk"
+brew "grep"
+brew "gnu-sed"
+brew "coreutils"
 
 # Fonts
 cask "font-fira-code-nerd-font"

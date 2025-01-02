@@ -76,7 +76,7 @@
     "explorer.fileNesting.enabled": true,
     "window.confirmSaveUntitledWorkspace": false,
     "workbench.commandPalette.history": 10,
-    "terminal.external.linuxExec": "warp",
+    "terminal.external.linuxExec": "Warp.app",
     "terminal.integrated.useWslProfiles": false,
     "terminal.integrated.smoothScrolling": true,
     "editor.tokenColorCustomizations": {
@@ -155,6 +155,9 @@
     "gitlens.showWhatsNewAfterUpgrades": false,
     "gitlens.plusFeatures.enabled": false,
     "gitlens.telemetry.enabled": false,
-    "markdown-preview-enhanced.codeBlockTheme": "github-dark.css"
+    "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+    "terminal.external.osxExec": "Warp.app",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.shellIntegration.history": 1000
     // New
 }

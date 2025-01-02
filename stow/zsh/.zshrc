@@ -13,7 +13,7 @@ SAVEHIST=10000000
 HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(ls|cd|pwd|exit|cd|gcm|gs|gu|lls|rm)*"
 
-# History options
+# History opts
 setopt APPEND_HISTORY             # append to history file (Default)
 setopt EXTENDED_HISTORY           # Write the history file in the ':start:elapsed;command' format.
 setopt HIST_IGNORE_ALL_DUPS       # Delete an old recorded event if a new event is a duplicate.
@@ -27,35 +27,11 @@ setopt histignorealldups sharehistory  # Enable history deduplication and sharin
 setopt INC_APPEND_HISTORY         # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY              # Share history between all sessions.
 
-# Completion system
-autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
-
-# Completion styling
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=2
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-
-# Process completion
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-# Add aws completion
-# autoload -U +X bashcompinit && bashcompinit
-# complete -C '/opt/homebrew/bin/aws_completer' aws
-
-# auto cd if command is a directory name
-setopt auto_cd
+# General opts
+setopt auto_cd                    # auto cd if command is a directory name
+setopt LIST_PACKED                # Completions menu compacted
+setopt MENU_COMPLETE              # Automatically highlight first element of completion menu
+setopt AUTO_LIST                  # Automatically list choices on ambiguous completion.
 
 # Tool initialization
 eval "$(starship init zsh)"
@@ -63,25 +39,40 @@ eval "$(zoxide init zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 source <(fzf --zsh)
 
-# fzf completion
-source $DOTFILES/zsh/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-bindkey '^I' fzf_completion
-# press ctrl-r to repeat completion *without* accepting i.e. reload the completion
-# press right to accept the completion and retrigger it
-# press alt-enter to accept the completion and run it
-keys=(
-    ctrl-r:'repeat-fzf-completion'
-    right:accept:'repeat-fzf-completion'
-    alt-enter:accept:'zle accept-line'
-)
-
-zstyle ':completion:*' fzf-completion-keybindings "${keys[@]}"
-# also accept and retrigger completion when pressing / when completing cd
-zstyle ':completion::*:cd:*' fzf-completion-keybindings "${keys[@]}" /:accept:'repeat-fzf-completion'
-
 # Zinit plugins and snippets
 zinit light yous/vanilli.sh
-zinit snippet $DOTFILES/zsh/my-accept-line.zsh
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+
+# Completion system
+autoload -Uz compinit && compinit
+
+# AWS completion system
+autoload -U +X bashcompinit && bashcompinit
+complete -C $HOMEBREW_PREFIX/bin/aws_completer aws
+
+# Main completion settings
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' menu select=2
+# zstyle ':completion:*' verbose true
+
+# Completion cache
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+
+# Completion styling
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*' file-sort modification
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Bindings
 bindkey "^k" up_widget

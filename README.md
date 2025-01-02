@@ -5,6 +5,7 @@
  / /_/ / /_/ / /_/ __/ / /  __(__  )
 /_____/\____/\__/_/ /_/_/\___/____/
 ```
+[![shellcheck](https://github.com/spoohie/dotfiles/actions/workflows/shell.yml/badge.svg)](https://github.com/spoohie/dotfiles/actions/workflows/shell.yml)
 
 My dotfiles to set up a dev environment in a **MacOS** machine.
 Summary:

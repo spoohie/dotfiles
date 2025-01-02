@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+cleanup() {
+    err "Last command failed"
+    info "Finishing..."
+}
+
+wait_input() {
+    read -p -r "Press enter to continue: "
+}
+
 reset_color=$(tput sgr 0)
 
 info() {

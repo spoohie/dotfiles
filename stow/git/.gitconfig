@@ -37,4 +37,3 @@
     log = LESS=-R delta
     reflog = LESS=-R delta
     show = LESS=-R delta
-    status = LESS=-R delta

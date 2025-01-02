@@ -9,16 +9,9 @@ set -o pipefail
 . osx.sh
 . utils.sh
 
-cleanup() {
-    err "Last command failed"
-    info "Finishing..."
-}
+bootstrap() {
+    trap cleanup SIGINT SIGTERM ERR EXIT
 
-wait_input() {
-    read -p -r "Press enter to continue: "
-}
-
-main() {
     info "Installing ..."
 
     info "################################################################################"
@@ -55,6 +48,7 @@ main() {
     done
 }
 
-trap cleanup SIGINT SIGTERM ERR EXIT
-
-main
+# Check if the script is being executed directly
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    bootstrap
+fi

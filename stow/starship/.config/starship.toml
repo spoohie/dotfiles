@@ -48,7 +48,7 @@ color_yellow = '#d79921'
 
 [os]
 disabled = false
-style = "bg:color_orange fg:color_fg0"
+style = "bg:color_orange"
 
 [os.symbols]
 Windows = "󰍲"

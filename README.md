@@ -33,4 +33,4 @@ curl -sO https://raw.githubusercontent.com/spoohie/dotfiles/master/dotfiles
 
 
 ## Credits
-Init scripts adapted based on [this](https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225q) article
+Bootstrap scripts based on [this](https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225q) article

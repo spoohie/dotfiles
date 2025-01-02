@@ -4,11 +4,9 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-. apps.sh
 . brew.sh
 . config.sh
 . osx.sh
-. packages.sh
 . utils.sh
 
 cleanup() {
@@ -24,22 +22,12 @@ main() {
     info "Installing ..."
 
     info "################################################################################"
-    info "Homebrew Packages"
+    info "Homebrew bundle"
     info "################################################################################"
     wait_input
-    install_packages
+    install_brewfile
 
-    post_install_packages
-    success "Finished installing Homebrew packages"
-
-    info "################################################################################"
-    info "MacOS Apps"
-    info "################################################################################"
-    wait_input
-    install_macos_apps
-
-    install_masApps
-    success "Finished installing macOS apps"
+    success "Finished installing Homebrew bundle"
 
     info "################################################################################"
     info "Configuration"

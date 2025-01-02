@@ -42,4 +42,10 @@ setup_osx() {
 
     # Secondary click in external mouse
     defaults write com.apple.AppleMultitouchMouse MouseButtonMode -string "TwoButton"
+
+    # Always open everything in Finder's list view
+    defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+
+    # Show the ~/Library folder
+    chflags nohidden ~/Library
 }

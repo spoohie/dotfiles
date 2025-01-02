@@ -60,6 +60,12 @@
     color: #ffffffc0 !important;
 }
 
+/* Input box */
+.monaco-inputbox {
+    font-family: 'Hack Nerd Font', monospace !important;
+    font-size: 12px !important;
+}
+
 .sidebar2-compositeComponent .pane-header {
     font-family: 'Hack Nerd Font', monospace !important;
     font-size: 13px !important;

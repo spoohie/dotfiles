@@ -19,4 +19,10 @@ Main apps:
 - Browser: Chrome, Firefox
 - Terminal: [Starship](https://starship.rs/), zsh
 
+## Installation
+Run the `dotfiles` script:
+```sh
+curl -sO https://raw.githubusercontent.com/spoohie/dotfiles/master/dotfiles
+```
+
 Init scripts adapted based on [this](https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225q) article

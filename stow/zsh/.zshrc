@@ -50,6 +50,9 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# auto cd if command is a directory name
+setopt auto_cd
+
 # Tool initialization
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

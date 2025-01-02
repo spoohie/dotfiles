@@ -15,7 +15,6 @@ aliases:
     co: pr checkout
     s: auth switch
     spoohie: auth switch -u spoohie
-    skillshow: auth switch -u karol-platkowski-snapsoft
     curr: auth status -a
     priv: auth switch -u spoohie
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.

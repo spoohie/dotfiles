@@ -46,6 +46,12 @@ setup_osx() {
     # Always open everything in Finder's list view
     defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
+    # Disable the “Are you sure you want to open this application?” dialog
+    defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+    # Disable smart quotes
+    defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
     # Show the ~/Library folder
     chflags nohidden ~/Library
 }

@@ -1,24 +1,26 @@
 [alias]
-  # *********************
-  # Rebase workflow
-  mainbranch = "!git remote show origin | sed -n '/HEAD branch/s/.*: //p'"
-  synced = "!git pull origin $(git mainbranch) --rebase"
-  update = "!git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase"
-  squash = "!git rebase -v -i $(git mainbranch)"
-  publish = push origin HEAD --force-with-lease
-  pub = publish 
+    mainbranch = "!git remote show origin | sed -n '/HEAD branch/s/.*: //p'"
+    synced = "!git pull origin $(git mainbranch) --rebase"
+    update = "!git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase"
+    squash = "!git rebase -v -i $(git mainbranch)"
+    publish = push origin HEAD --force-with-lease
+    pub = publish
 
 [core]
-  editor = vim
-  excludesfile = $DOTFILES/git/.gitignore_global
+    editor = vim
+    excludesFile = ~/repos/dotfiles/git/.gitignore_global
+
 [credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = 
+    helper = !/opt/homebrew/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+    helper = 
+    helper = !/opt/homebrew/bin/gh auth git-credential
+
 [interactive]
     diffFilter = LESS=-R delta --color-only
+
 [delta]
     features = side-by-side navigate decorations
     syntax-theme = Visual Studio Dark+
@@ -30,8 +32,10 @@
     file-style = bold yellow ul
     file-decoration-style = none
     hunk-header-decoration-style = cyan box ul
+
 [merge]
     conflictstyle = zdiff3
+
 [pager]
     diff = LESS=-R delta
     log = LESS=-R delta

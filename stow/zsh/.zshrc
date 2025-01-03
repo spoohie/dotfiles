@@ -39,12 +39,6 @@ eval "$(zoxide init zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 source <(fzf --zsh)
 
-# Zinit plugins and snippets
-zinit light yous/vanilli.sh
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-
 # Completion system
 autoload -Uz compinit && compinit
 
@@ -52,9 +46,16 @@ autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 complete -C $HOMEBREW_PREFIX/bin/aws_completer aws
 
+# Zinit plugins and snippets
+# zinit light yous/vanilli.sh
+zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+
 # Main completion settings
 zstyle ':completion:*' completer _extensions _complete _approximate
-zstyle ':completion:*' menu select=2
+zstyle ':completion:*' menu no
 # zstyle ':completion:*' verbose true
 
 # Completion cache
@@ -62,6 +63,7 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 
 # Completion styling
+zstyle ':fzf-tab:*' continuous-trigger "right"
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' file-sort modification
@@ -75,4 +77,4 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Bindings
-bindkey "^k" up_widget
+bindkey "^k" up_widget # UP with Cmd+K

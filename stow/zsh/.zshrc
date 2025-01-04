@@ -64,17 +64,21 @@ zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 
 # Completion styling
 zstyle ':fzf-tab:*' continuous-trigger "right"
-zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-grouped true
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' file-sort modification
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-# zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %D %d --%f'
+zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
 zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color=always --group-directories-first $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons --color=always --group-directories-first $realpath'
+zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
+zstyle ':fzf-tab:complete:aws:*' fzf-preview '[ "${word#--}" = "$word" ] && $words $word help' # show help for aws commands, ignore it for flags  
 
 # Bindings
 bindkey "^k" up_widget # UP with Cmd+K

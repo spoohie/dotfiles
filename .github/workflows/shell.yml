@@ -6,7 +6,7 @@ on:
     paths:
       - "**/*.sh"
     branches:
-      - "main"
+      - "master"
 jobs:
   lint:
     name: lint

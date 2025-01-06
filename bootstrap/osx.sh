@@ -52,6 +52,9 @@ setup_osx() {
     # Disable smart quotes
     defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
+    # Set dock autohide delay
+    defaults write com.apple.dock autohide-time-modifier -float 0.1 && killall Dock
+
     # Show the ~/Library folder
     chflags nohidden ~/Library
 }

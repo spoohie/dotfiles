@@ -14,24 +14,24 @@ HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(ls|cd|pwd|exit|cd|gcm|gs|gu|lls|rm)*"
 
 # History opts
-setopt APPEND_HISTORY             # append to history file (Default)
-setopt EXTENDED_HISTORY           # Write the history file in the ':start:elapsed;command' format.
-setopt HIST_IGNORE_ALL_DUPS       # Delete an old recorded event if a new event is a duplicate.
-setopt HIST_IGNORE_DUPS           # Do not record an event that was just recorded again.
-setopt HIST_IGNORE_SPACE          # Do not record an event starting with a space.
-setopt HIST_NO_STORE              # Don't store history commands
-setopt HIST_REDUCE_BLANKS         # Remove superfluous blanks from each command line being added to the history.
-setopt HIST_SAVE_NO_DUPS          # Do not write a duplicate event to the history file.
-setopt HIST_VERIFY                # Do not execute immediately upon history expansion.
+setopt APPEND_HISTORY                  # append to history file (Default)
+setopt EXTENDED_HISTORY                # Write the history file in the ':start:elapsed;command' format.
+setopt HIST_IGNORE_ALL_DUPS            # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_IGNORE_DUPS                # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_SPACE               # Do not record an event starting with a space.
+setopt HIST_NO_STORE                   # Don't store history commands
+setopt HIST_REDUCE_BLANKS              # Remove superfluous blanks from each command line being added to the history.
+setopt HIST_SAVE_NO_DUPS               # Do not write a duplicate event to the history file.
+setopt HIST_VERIFY                     # Do not execute immediately upon history expansion.
 setopt histignorealldups sharehistory  # Enable history deduplication and sharing between sessions
-setopt INC_APPEND_HISTORY         # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY              # Share history between all sessions.
+setopt INC_APPEND_HISTORY              # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY                   # Share history between all sessions.
 
 # General opts
-setopt auto_cd                    # auto cd if command is a directory name
-setopt LIST_PACKED                # Completions menu compacted
-setopt MENU_COMPLETE              # Automatically highlight first element of completion menu
-setopt AUTO_LIST                  # Automatically list choices on ambiguous completion.
+setopt auto_cd                         # auto cd if command is a directory name
+setopt LIST_PACKED                     # Completions menu compacted
+setopt MENU_COMPLETE                   # Automatically highlight first element of completion menu
+setopt AUTO_LIST                       # Automatically list choices on ambiguous completion.
 
 # Tool initialization
 eval "$(starship init zsh)"
@@ -63,22 +63,22 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 
 # Completion styling
-zstyle ':fzf-tab:*' continuous-trigger "right"
-zstyle ':completion:*' list-grouped true
-zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' file-sort modification
+zstyle ':completion:*' list-grouped true
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
-zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
-zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':fzf-tab:*' continuous-trigger "right"
+zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
+zstyle ':fzf-tab:complete:aws:*' fzf-preview '[ "${word#--}" = "$word" ] && $words $word help' # show help for aws commands, ignore it for flags
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color=always --group-directories-first $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons --color=always --group-directories-first $realpath'
-zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
-zstyle ':fzf-tab:complete:aws:*' fzf-preview '[ "${word#--}" = "$word" ] && $words $word help' # show help for aws commands, ignore it for flags  
 
 # Bindings
 bindkey "^k" up_widget # UP with Cmd+K

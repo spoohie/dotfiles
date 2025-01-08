@@ -32,5 +32,9 @@ curl -sO https://raw.githubusercontent.com/spoohie/dotfiles/master/dotfiles
 - [LocalSend](https://localsend.org/pl)
 
 
+## Terminal
+![Alt text](static/terminal.png?raw=true "Shell")
+
+
 ## Credits
 Bootstrap scripts based on [this](https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225q) article

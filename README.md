@@ -33,7 +33,7 @@ curl -sO https://raw.githubusercontent.com/spoohie/dotfiles/master/dotfiles
 
 
 ## Terminal
-![Alt text](static/terminal.png?raw=true "Shell")
+![Alt text](static/macchina.png?raw=true "Shell")
 
 
 ## Credits

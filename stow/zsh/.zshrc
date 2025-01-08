@@ -38,6 +38,7 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 source <(fzf --zsh)
+eval $(thefuck --alias)
 
 # Completion system
 autoload -Uz compinit && compinit

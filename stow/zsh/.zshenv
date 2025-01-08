@@ -4,9 +4,7 @@ export DOTFILES=$REPOS/dotfiles
 export DELTA_PAGER="less $LESS"
 
 # Aliases
-# because i can
 alias sudo="sudo "
-alias kurwa="sudo"
 
 # ls
 alias l="ls -laG"
@@ -58,6 +56,9 @@ alias code.="cursor ."
 alias ec="vim + ~/.zshrc"
 alias sc="source ~/.zshrc && source ~/.zshenv"
 alias ea="vim + ~/.zshenv"
+
+# Because I can
+alias kurwa="fuck"
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into

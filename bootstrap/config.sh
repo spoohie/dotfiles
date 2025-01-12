@@ -3,6 +3,7 @@ stow_dotfiles() {
         ".config/gh/config.yml"
         ".config/starship.toml"
         ".gitconfig"
+        ".hammerspoon/init.lua"
         "Library/Application Support/Cursor/User/keybindings.json"
         "Library/Application Support/Cursor/User/settings.json"
         ".ruff.toml"

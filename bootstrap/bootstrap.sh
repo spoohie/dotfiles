@@ -18,7 +18,7 @@ bootstrap() {
     info "Homebrew bundle"
     info "################################################################################"
     wait_input
-    install_brewfile
+    install_homebrew_bundle
 
     success "Finished installing Homebrew bundle"
 

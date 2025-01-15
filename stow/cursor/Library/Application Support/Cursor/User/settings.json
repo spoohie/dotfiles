@@ -9,7 +9,7 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "editor.fontFamily": "Hack Nerd Font, Fira Code, Hack, 'Courier New', monospace",
+    "editor.fontFamily": "Fira Code, Hack, Hack Nerd Font, 'Courier New', monospace",
     "editor.fontSize": 11,
     "editor.inlineSuggest.enabled": true,
     "editor.minimap.enabled": false,

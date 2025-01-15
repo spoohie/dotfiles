@@ -33,7 +33,7 @@ brew "gnu-sed"
 brew "coreutils"
 
 # Fonts
-cask "font-fira-code-nerd-font"
+cask "font-fira-code"
 cask "font-hack-nerd-font"
 
 # Apps (Casks)

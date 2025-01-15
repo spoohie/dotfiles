@@ -1,4 +1,4 @@
-install_brewfile() {
-    info "Installing Homebrew"
+install_homebrew_bundle() {
+    info "Installing Homebrew bundle"
     brew bundle --file=Brewfile
 }

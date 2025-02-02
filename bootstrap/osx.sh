@@ -40,4 +40,13 @@ setup_osx() {
 
     # Show the ~/Library folder
     chflags nohidden ~/Library
+
+    # Fix slow initial key repeat (great for arrow keys)
+    defaults write -g InitialKeyRepeat -int 10
+
+    # Fix slow key repeat (also great for arrow keys)
+    defaults write -g KeyRepeat -int 3
+
+    # Disable brew analytics
+    brew analytics off
 }

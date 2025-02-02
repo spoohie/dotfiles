@@ -12,11 +12,13 @@ local function swapWindowsBetweenExternalScreens()
     end
 
     local screen1, screen2 = externalScreens[1], externalScreens[2]
+
+    
     local windowsOnScreen1 = hs.fnutils.filter(hs.window.visibleWindows(), function(win)
-        return win:screen() == screen1
+        return win:screen() == screen1 and (win:application():name() == "Google Chrome" or win:application():name() == "Firefox" or win:application():name() == "Cursor")
     end)
     local windowsOnScreen2 = hs.fnutils.filter(hs.window.visibleWindows(), function(win)
-        return win:screen() == screen2
+        return win:screen() == screen2 and (win:application():name() == "Google Chrome" or win:application():name() == "Firefox" or win:application():name() == "Cursor")
     end)
 
     local animationDuration = 0.3 -- Set animation duration for smooth transition
